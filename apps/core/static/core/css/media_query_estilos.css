@@ -1,0 +1,6 @@
+@media screen and (max-width: 500px){ /* Menor que 400px (celular)*/
+    .menu{
+        border: 2px solid rgb(0, 255, 64);
+    }
+
+}
