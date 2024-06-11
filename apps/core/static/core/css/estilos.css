@@ -208,16 +208,6 @@ body{
     /* border: 1px solid rgb(0, 0, 0); */
 }
 
-.card-recentes .card-recentes-conteiner{
-    display: flex;
-    margin: auto;
-    margin-top: 5%;
-    width: 90%;
-    height: 90%;
-    border: 1px solid rgb(0, 0, 0);
-}
-
-
 .card-recentes .card-recentes-img{
     width: 100%;
     height: 50%;
@@ -233,31 +223,56 @@ body{
     border-bottom-right-radius: 0; /* Sem borda arredondada */
 }
 
-.card-recentes-valor{
+.card-recentes .card-recentes-conteiner{
     display: flex;
-    justify-content: left;
+    flex-direction: column;
+    margin: auto;
     margin-top: 5%;
+    width: 90%;
+    height: 46%;
+    /* border: 2px solid rgb(0, 255, 179); */
+}
+
+.card-recentes-valor{
     width: 100%;
-    height: 10%;
-    /* border: 2px solid blue; */
+    height: 13%;
+    /* border: 2px solid rgb(255, 0, 0); */
 }
 
 .card-recentes-valor p{
-    margin: auto;
     font-size: 18px;
-    margin-left: 7%;
 }
 
 .card-recentes-descricao{
-    display: flex;
-    justify-content: left;
+    margin-top: 5%;
     width: 100%;
-    height: 18%;
-    /* border: 2px solid blue; */
+    height: 50%;
+    /* border: 2px solid rgb(255, 0, 0); */
     }
     
 .card-recentes-descricao p{
-    /* margin: auto; */
-    font-size: 14px;
-    margin-left: 17px;   
+    font-size: 14px; 
+    overflow-wrap: break-word; /* Quebra o texto para a linha de baixo*/
+}
+
+.card-recentes-data{
+    margin-top: 8%;
+    width: 100%;
+    height: 10%;
+    /* border: 2px solid red; */
+}
+
+.card-recentes-data p{
+    font-size: 12px;
+}
+
+.card-recentes-loc{
+    width: 100%;
+    height: 10%;
+    margin-top: 5%;
+    /* border: 2px solid red; */
+}
+
+.card-recentes-loc p{
+    font-size: 12px;
 }
