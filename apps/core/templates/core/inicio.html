@@ -53,8 +53,8 @@
         </div>
 
         <!-- MENU MOBILE -->
-        <div class="menu-mobile">
-            <div class="grupo-menu-mobile">
+        <div class="container-menu-mobile">
+            <div class="components-menu-mobile">
                 <div class="logotipo-mobile">
                     <div class="imagem-logo-mobile">
                         <a href="#" class=""><img src="{% static 'core/img/logo.mobile.png' %}" alt="logotipo"></a>
@@ -62,7 +62,6 @@
                 </div>  
                 <div class="buscar-mobile">
                         <input type="text" class="form-control" placeholder="Buscar" aria-label="Recipient's username" aria-describedby="button-addon2">
-                    
                         <div class="input-group-append">
                             <button class="btn btn-outline" type="button" id="button-addon2"><img src="{% static 'core/img/buscar.png' %}" alt=""></button>
                         </div>
@@ -279,9 +278,8 @@
         </div>
     </div>
     
-    <!-- CORPO MOBILE -->
-    <div class="corpo-mobile">
-
+    <!-- CONTAINER MOBILE -->
+    <div class="container-mobile">
         <!-- BANNER MOBILE -->
         <div class="propaganda-banner-mobile">        
             <div class="card-propaganda-banner-mobile">
@@ -326,35 +324,22 @@
         </div>
 
         <!-- ANÚNCIOS RECENTES MOBILE -->
-        <div id="titulo-recentes-mobile">
+        <!-- <div id="titulo-recentes-mobile">
             Anúncios Recentes
-        </div>
-        <div class="anuncios-recentes-mobile">
-            <div class="cards-recentes-mobile">
-                <div class="cards-recentes-img-mobile">
-                    <a href="#" class="">
-                        <!-- <img src="{% static 'core/img/banner1.png' %}" alt="logotipo"> -->
-                    </a>
-                </div>
-                <div class="cards-recentes-corpo-mobile">
-                    <div class="card-recentes-valor-mobile">
-                        <p>R$ 2.800,00</p>
-                    </div>
-                    <div class="card-recentes-descricao-mobile">
-                        <p>7 bezerras nelore! 216kg</p>
-                    </div>
-                    <div class="card-recentes-data-mobile">
-                        <p>11/06/2024</p>
-                    </div>
-                    <div class="card-recentes-loc-mobile">
-                        <p>Campo Grande - MS</p>
-                    </div>
-                </div>
+        </div> -->
+        <div class="container">
+            <div class="card-recentes item-1">
+                <a href="#">
+                    <!-- <img src="{% static 'core/img/banner1.png' %}" alt="logotipo"> -->
+                </a>
             </div>
+            <div class="card-recentes valor">1</div>
+            <div class="card-recentes descricao">2</div>
+            <div class="card-recentes data">3</div>
+            <div class="card-recentes localizacao">4</div>
         </div>
          
     </div>
-
 
     <div class="menu-rodape">
         <div class="grupo-menu-rodape">
