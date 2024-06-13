@@ -112,5 +112,46 @@
         border-radius: 5%
     } */
 
+    #titulo-recentes-mobile{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 7%;
+        width: 100%;
+        height: 5px;
+        font-size: 17px;
+        /* border: 20px solid red; */
+    }
+
+    .anuncios-recentes-mobile{
+        display: flex;
+        align-items: center;
+        margin-right: 10%;
+        margin-top: 2%;
+        width: 100%;
+        height: 400px;
+        border: 2px solid rgb(89, 0, 255);
+    }
+
+    .cards-recentes-mobile{
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        width: 55%;
+        height: 400px;
+        border-top-left-radius: 3%;  /* Ajuste conforme necessário */
+        border-top-right-radius: 3%; /* Ajuste conforme necessário */
+        border-bottom-left-radius: 3%;  /* Sem borda arredondada */
+        border-bottom-right-radius: 3%; /* Sem borda arredondada */
+        background-color: white;
+        border: 2px solid rgb(0, 238, 255);
+    }
+
+    .cards-recentes-img-mobile{
+        width: 100%;
+        height: 50%;
+        border: 2px solid gold;
+    }
+
 }
 
