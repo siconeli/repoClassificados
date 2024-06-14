@@ -1,132 +1,14 @@
-@media (min-width: 768px){ /* Maior que 501px (monitor) */
-    .menu-mobile, .categorias-mobile{
+@media (min-width: 761px){ /* Maior que 761px (monitor) */
+    .nav-mobile{
         display: none;
     }
 }
 
-@media (max-width: 768px){ /* Menor que 768px (celular)*/
+@media (max-width: 760px){ /* Menor que 760px (celular)*/
     /* WEB */
-    .menu, .corpo, .menu-rodape{
+    .nav{
         display: none;
     }
-
-    .container-menu-mobile{
-        display: flex;
-        width: 100%;
-        height: 70px;
-        background-color: rgb(4, 90, 42);
-    }
-
-    .components-menu-mobile{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: 10px;
-        /* border: 3px solid red; */
-    }
-
-    .logotipo-mobile{
-        width: 16%;
-        height: 100%;
-        /* border: 2px solid blue; */
-    }
-
-    .imagem-logo-mobile img{
-        padding-top: 15px;
-        width: 100%;
-        height: 100%;
-    }
-
-    .buscar-mobile{
-        display: flex;
-        width: 80%;
-        /* border: 2px solid blue; */
-    }
-
-    .buscar-mobile .input-group-append button{
-        background-color: rgb(0, 0, 0);
-    }
-
-    .container-mobile{
-        margin: 10px;
-        flex-direction: column;
-        column-gap: 10px;
-        border: 3px solid red;
-    }
-
-    .propaganda-banner-mobile{
-        width: 100%;
-        height: 150px;
-        /* border: 2px solid rgb(0, 241, 52);   */
-    }
-
-    .card-propaganda-banner-mobile{
-        width: 100%;
-        height: 150px;
-        border-radius: 2%;
-        background-color: rgb(4, 90, 42);
-    }
-
-
-    .categorias-mobile{
-        display: flex;
-        justify-content: flex-start;
-        margin: auto;
-        /* margin-top: 7%; */
-        width: 100%;
-        height: 80px;
-        gap: 18px;
-        overflow-x: scroll; /* Permite a rolagem horizontal */
-        -webkit-overflow-scrolling: touch; /* Suaviza a rolagem em dispositivos iOS */
-        white-space: nowrap; /* Impede a quebra de linha */
-        scrollbar-width: none; /* Oculta a barra de rolagem no Firefox */
-        border: 2px solid blue;
-    }
-
-    .categorias-mobile::-webkit-scrollbar{
-        display: none; /* Oculta a barra de rolagem no Chrome, Safari e Edge */
-    }
-
-    .card-categoria-mobile{
-        flex: 0 0 auto; /* Assegura que as categorias não encolham */
-        width: 30%;
-        border-radius: 8%;
-        background-color: rgb(4, 90, 42);
-    }
-
-    /* .card-categoria-mobile img{
-        width: 100%;
-        height: 100%;
-        border-radius: 5%
-    } */
-
-    #titulo-recentes-mobile{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        /* margin-top: 7%; */
-        width: 100%;
-        height: 5px;
-        font-size: 17px;
-        border: 20px solid red;
-    }
-
-    .container{
-        /* display: flex; */
-        border: 2px solid red;
-        /* margin-top: 30px; */
-        flex-direction: column;
-    }
-
-    .card-recentes{
-        width: 80px;
-        height: 80px;
-        /* padding: 50px; */
-
-        margin: 20px;
-        background-color: greenyellow;
-    }
-
 
 }
 

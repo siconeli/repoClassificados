@@ -1,8 +1,9 @@
-from django.shortcuts import render, redirect 
+from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.contrib.auth import authenticate, login, logout
 from .forms import CadastrarUsuarioForm
 from .models import Usuario
+from django.http import HttpResponse
 
 def Entrar(request):
     if request.method == 'GET':
@@ -20,7 +21,7 @@ def Entrar(request):
             return redirect(reverse('inicio'))
         # TODO Adicionar message de error (Dados errados ou inválidos)
         return render(request, 'usuarios/entrar.html')
-    
+
 def Sair(request):
     if request.method == 'GET':
         logout(request)
@@ -34,15 +35,23 @@ def CadastrarUsuario(request):
             usuario = form.cleaned_data.get('email')
             telefone = form.cleaned_data.get('telefone')
             senha = form.cleaned_data.get('password')
+            confirma_senha = request.POST.get('confirma_password')
+
+            print(senha)
+            print(confirma_senha)
 
             if Usuario.objects.filter(username=usuario, is_active=True).exists():
                 # TODO Adicionar message de error (Já existe usuário com esté email)
                 return redirect(reverse('cadastrar_usuario'))
+            
+            if senha != confirma_senha:
+                # TODO Adicionar message de error (Senhas diferentes)
+                return redirect(reverse('cadastrar_usuario'))
+            
             Usuario.objects.create_user(first_name=nome, username=usuario, telefone=telefone, password=senha)
-           
             autenticado = authenticate(username=usuario, password=senha)
             if autenticado is not None:
                 login(request, autenticado)
                 return redirect(reverse('inicio'))
-                
+
     return render(request, 'usuarios/cadastrar.html')
