@@ -35,8 +35,18 @@
                     <li><a href="#">Notícias</a></li>
                     <li><a href="#">Cotação</a></li>
                     <li class="criar_loja"><a href="#">Criar Loja</a></li>
-                    <li class="anunciar"><a href="#">Anunciar</a></li>
-                    <li class="entrar"><a href="#">Entrar</a></li>
+
+                    {% if user.is_authenticated %}
+                        <li class="anunciar"><a href="#">Anunciar</a></li>
+                    {% else %}
+                        <li class="anunciar"><a href="{% url 'entrar' %}">Anunciar</a></li>
+                    {% endif %}
+
+                    {% if user.is_authenticated %}
+                        <li class="entrar"><a href="{% url 'sair' %}">Sair</a></li>
+                    {% else %}
+                        <li class="entrar"><a href="{% url 'entrar' %}">Entrar</a></li>
+                    {% endif %}
                 </ul>
             </nav>
         </header>
