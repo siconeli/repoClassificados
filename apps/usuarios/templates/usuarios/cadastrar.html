@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar</title>
+</head>
+<body>
+    <main>
+        <h1>Crie sua conta</h1>
+    <form action="{% url 'cadastrar_usuario' %}" method="post" enctype="">
+        {% csrf_token %}
+        <div>
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" required>
+        </div>
+        <br>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <br>
+        <div>
+            <label for="telefone">Telefone</label>
+            <input type="text" name="telefone" id="telefone" required>
+        </div>
+        <br>
+        <div>
+            <label for="password">Senha</label>
+            <input type="text" name="password" id="password" required>
+        </div>
+        <br>
+        <div>
+            <label for="password_confirma">Confirmar Senha</label>
+            <input type="text" name="password_confirma" id="password_confirma" required>
+        </div>
+        <br>
+        <button type="submit">Cadastrar</button>
+    </form>
+    <br>
+    <br>
+    <p>Já tem uma conta? <a href="{% url 'entrar' %}">Entre!</a></p>
+    </main>
+    
+</body>
+</html>

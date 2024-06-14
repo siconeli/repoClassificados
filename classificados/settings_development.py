@@ -137,3 +137,7 @@ MEDIA_ROOT = (
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Settings auth (sobrescrevendo o User para utilizar o meu app de usuario customizado)
+AUTH_USER_MODEL = 'usuarios.Usuario'
